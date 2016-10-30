@@ -91,12 +91,19 @@ input[disabled] {
 	margin-bottom: 5px;
 }
 
+.form_item input.ng-touched {
+	background-position: right center;
+	background-repeat: no-repeat; 
+}
+
 .form_item input.ng-touched.ng-invalid {
 	border-color: #ab433f;
+	background-image: url("../img/icon_invalid.png");
 }
 
 .form_item input.ng-touched.ng-valid {
 	border-color: #3a773a;
+	background-image: url("../img/icon_valid.png");
 }
 
 .form_item .error {
