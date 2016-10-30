@@ -1,0 +1,132 @@
+/* Common elements */
+
+body {
+	line-height: 1.5;
+	font-size: 16px;
+	font-family: sans-serif;
+	color: #010101;
+	background-color: #edebe7;
+}
+
+h1,
+h2
+{
+	font-weight: bold;
+	color: #ff0000;
+}
+
+h1 {
+	margin-bottom: 15px;
+	font-size: 28px;
+}
+
+h2 {
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+a {
+	color: #ff0000;
+}
+
+/* Input elements */
+
+input,
+a.button
+{
+	display: inline-block;
+	width: 100%;
+	height: 34px;
+	line-height: 34px;
+	font-size: inherit;
+	padding: 0 10px;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 6px;
+	box-sizing: border-box;
+	text-decoration: none;
+	outline: none;
+}
+
+input[type="email"],
+input[type="password"]
+{
+	border-color: #808080;
+}
+
+input[type="submit"],
+a.button
+{
+	font-weight: bold;
+	text-align: center;
+	color: #ff0000;
+	border-color: #ff0000;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+input[type="submit"]{
+	color: #ffffff;
+	background-color: #ff0000;
+}
+
+
+/* Forms */
+
+.form_item {
+	margin-bottom: 15px;
+}
+
+.form_item:last-child {
+	margin-bottom: 0;
+}
+
+.form_item label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+.form_item .error .message {
+	font-size: 14px;
+	color: #ff0000;
+}
+
+
+/* Login page */
+
+.container {
+	position: relative;
+	width: 800px;
+	margin: 15px auto 0 auto;
+}
+
+.container:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.container .section {
+	width: 50%;
+	box-sizing: border-box;
+}
+
+.container .section.login {
+	float: right;
+	padding-left: 35px;
+	border-left: 1px solid #808080;
+	margin-left: -1px;
+	margin-right: 1px;
+}
+
+.container .section.register {
+	float: left;
+	padding-right: 35px;
+	border-right: 1px solid #808080;
+}
+
+.container .inputs,
+.container .text
+{
+	min-height: 200px;
+}

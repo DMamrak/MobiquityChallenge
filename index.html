@@ -13,22 +13,27 @@
 	</head>
 
 	<body ng-controller="Login as login">
-		<h1>Login</h1>
 
 		<div class="container">
+			<h1>Login</h1>
+
 			<!-- Login -->
 			<form class="section login">
 				<h2>I already have a profile</h2>
 
-				<div class="form_item email">
-					<label>E-mail address:</label>
-					<input type="email" placeholder="E-mail address" ng-model="login.user.email" />
-				</div>
+				<!-- Inputs -->
+				<div class="inputs">
+					<div class="form_item email">	
+						<label>E-mail address:</label>
+						<input type="email" placeholder="E-mail address" ng-model="login.user.email" />
+					</div>
 
-				<div class="form_item password">
-					<label>Password:</label>
-					<input type="password" placeholder="Password" ng-model="login.user.password" />
+					<div class="form_item password">
+						<label>Password:</label>
+						<input type="password" placeholder="Password" ng-model="login.user.password" />
+					</div>
 				</div>
+				<!-- /Inputs -->
 				
 				<div class="form_item">
 					<input type="submit" value="Log in" />
@@ -39,10 +44,14 @@
 			<!-- Register -->
 			<div class="section register">
 				<h2>Create a profile</h2>
-				<p class="profile">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate sapien et enim mattis egestas.</p>
+				<div class="text">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate sapien et enim mattis egestas.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate sapien et enim mattis egestas.</p>
+				</div>
 				<a href="/register" class="button">Register</a>
 			</div>
 			<!-- /Register -->
 		</div>
+
 	</body>
 </html>
