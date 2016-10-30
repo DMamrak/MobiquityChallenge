@@ -25,6 +25,10 @@ h2 {
 	font-size: 18px;
 }
 
+p {
+	margin-bottom: 15px;
+}
+
 a {
 	color: #ff0000;
 }
@@ -82,10 +86,6 @@ input[disabled] {
 	margin-bottom: 15px;
 }
 
-.form_item:last-child {
-	margin-bottom: 0;
-}
-
 .form_item label {
 	display: block;
 	margin-bottom: 5px;
@@ -108,38 +108,51 @@ input[disabled] {
 /* Login page */
 
 .container {
-	position: relative;
-	width: 800px;
-	margin: 15px auto 0 auto;
+	margin: 15px;
 }
 
-.container:after {
-	content: "";
-	display: block;
-	clear: both;
+@media screen and (min-width: 600px) {
+	.container {
+		margin-left: 25px;
+		margin-right: 25px;
+	}
+
+	.container:after {
+		content: "";
+		display: block;
+		clear: both;
+	}
+
+	.container .section {
+		width: 50%;
+		box-sizing: border-box;
+	}
+
+	.container .section.login {
+		float: right;
+		padding-left: 25px;
+		border-left: 1px solid #808080;
+		margin-left: -1px;
+		margin-right: 1px;
+	}
+
+	.container .section.register {
+		float: left;
+		padding-right: 25px;
+		border-right: 1px solid #808080;
+	}
+
+	.container .inputs,
+	.container .text
+	{
+		min-height: 200px;
+	}
 }
 
-.container .section {
-	width: 50%;
-	box-sizing: border-box;
-}
-
-.container .section.login {
-	float: right;
-	padding-left: 35px;
-	border-left: 1px solid #808080;
-	margin-left: -1px;
-	margin-right: 1px;
-}
-
-.container .section.register {
-	float: left;
-	padding-right: 35px;
-	border-right: 1px solid #808080;
-}
-
-.container .inputs,
-.container .text
-{
-	min-height: 200px;
+@media screen and (min-width: 850px) {
+	.container {
+		width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
