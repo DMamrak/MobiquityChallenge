@@ -70,6 +70,11 @@ input[type="submit"]{
 	background-color: #ff0000;
 }
 
+input[disabled] {
+	opacity: 0.5;
+	cursor: default;
+}
+
 
 /* Forms */
 
@@ -86,9 +91,17 @@ input[type="submit"]{
 	margin-bottom: 5px;
 }
 
-.form_item .error .message {
+.form_item input.ng-touched.ng-invalid {
+	border-color: #ab433f;
+}
+
+.form_item input.ng-touched.ng-valid {
+	border-color: #3a773a;
+}
+
+.form_item .error {
 	font-size: 14px;
-	color: #ff0000;
+	color: #ab433f;
 }
 
 

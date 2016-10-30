@@ -18,25 +18,34 @@
 			<h1>Login</h1>
 
 			<!-- Login -->
-			<form class="section login">
+			<form class="section login" ng-submit="login.submit()" name="credentials" novalidate>
 				<h2>I already have a profile</h2>
 
 				<!-- Inputs -->
 				<div class="inputs">
 					<div class="form_item email">	
 						<label>E-mail address:</label>
-						<input type="email" placeholder="E-mail address" ng-model="login.user.email" />
+						<input type="email" placeholder="E-mail address" name="email" ng-model="login.user.email" required />
+						<span class="error" ng-if="credentials.email.$touched && credentials.email.$error.required">
+							Please enter your e-mail.
+						</span> 
+						<span class="error" ng-if="credentials.email.$touched && credentials.email.$error.email">
+							The e-mail you've entered is incorrect.
+						</span> 
 					</div>
 
 					<div class="form_item password">
 						<label>Password:</label>
-						<input type="password" placeholder="Password" ng-model="login.user.password" />
+						<input type="password" placeholder="Password" name="password" ng-model="login.user.password" required />
+						<span class="error" ng-if="credentials.password.$touched && credentials.password.$error.required">
+							Please enter your password.
+						</span> 
 					</div>
 				</div>
 				<!-- /Inputs -->
 				
 				<div class="form_item">
-					<input type="submit" value="Log in" />
+					<input type="submit" value="Log in" ng-disabled="credentials.$invalid" />
 				</div>
 			</form>
 			<!-- /Login -->
